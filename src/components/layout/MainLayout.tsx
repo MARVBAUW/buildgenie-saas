@@ -3,6 +3,7 @@ import React from 'react';
 import Sidebar from './Sidebar';
 import AIAssistant from './AIAssistant';
 import { cn } from '@/lib/utils';
+import UserProfile from '../auth/UserProfile';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -24,6 +25,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         fullWidth ? "p-0" : "p-4 md:p-6 lg:p-8",
         className
       )}>
+        <div className="flex justify-end mb-4">
+          <UserProfile />
+        </div>
         {children}
       </main>
       
